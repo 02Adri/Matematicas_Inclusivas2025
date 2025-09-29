@@ -1,0 +1,115 @@
+<ion-header>
+  <ion-toolbar style="--background: #b3d9ff;">
+    <!-- Botón atrás -->
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login-login"></ion-back-button>
+    </ion-buttons>
+
+    <!-- Título -->
+    <ion-title>Infinimath</ion-title>
+
+    <!-- Accesibilidad -->
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="accessibility-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Saludo -->
+  <ion-card style="--background:#e6f3ff;">
+    <ion-card-content class="ion-text-center">
+      <h2>🐬 ¡Elige qué quieres aprender hoy!</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Opciones de lecciones -->
+  <ion-grid>
+    <ion-row>
+    <ion-col size="6">
+  <ion-card button (click)="irMinigame()">
+    <ion-card-content class="ion-text-center">
+      <div style="font-size:2rem;">🔢</div>
+      <p>Números</p>
+    </ion-card-content>
+  </ion-card>
+</ion-col>
+
+
+      <ion-col size="6">
+        <ion-card button>
+          <ion-card-content class="ion-text-center">
+            <div style="font-size:2rem;">➕➖</div>
+            <p>Sumas y Restas</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-card button>
+          <ion-card-content class="ion-text-center">
+            <div style="font-size:2rem;">✖️➗</div>
+            <p>Multiplicación</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card button>
+          <ion-card-content class="ion-text-center">
+            <div style="font-size:2rem;">📐</div>
+            <p>Geometría</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-card button>
+          <ion-card-content class="ion-text-center">
+            <div style="font-size:2rem;">📊</div>
+            <p>Datos</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card button>
+          <ion-card-content class="ion-text-center">
+            <div style="font-size:2rem;">🎯</div>
+            <p>Retos especiales</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <!-- Progreso -->
+  <div class="ion-text-center" style="margin-top: 20px;">
+    <p>Progreso: ⭐⭐⭐☆ (3/5 lecciones completadas)</p>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="help-circle-outline"></ion-icon>
+        Ayuda
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="bug-outline"></ion-icon>
+        Bug Hunters
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

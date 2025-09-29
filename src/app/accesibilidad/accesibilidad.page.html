@@ -1,0 +1,119 @@
+<ion-header>
+  <ion-toolbar style="--background:#b3d9ff;">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/login-login"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Opciones de accesibilidad</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Mensaje de la mascota -->
+  <ion-card style="--background:#e6f3ff;">
+    <ion-card-content class="ion-text-center">
+      <ion-img src="assets/mascota.png" style="width:80px; margin:auto;"></ion-img>
+      <h2>🐬 Aquí puedes cambiar cómo se ve y suena la app</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Texto y lectura -->
+  <ion-card>
+    <ion-card-header>
+      <h3>🔤 Texto y lectura</h3>
+    </ion-card-header>
+    <ion-card-content>
+      <p>Tamaño de fuente:</p>
+      <ion-segment value="med">
+        <ion-segment-button value="peq">Peq</ion-segment-button>
+        <ion-segment-button value="med">Med</ion-segment-button>
+        <ion-segment-button value="gran">Gran</ion-segment-button>
+      </ion-segment>
+
+      <ion-item lines="none">
+        <ion-label>Fuente accesible</ion-label>
+        <ion-checkbox slot="end" checked></ion-checkbox>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label>Modo lectura fácil</ion-label>
+        <ion-checkbox slot="end" checked></ion-checkbox>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Colores y visión -->
+  <ion-card>
+    <ion-card-header>
+      <h3>👀 Colores y visión</h3>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label>Alto contraste</ion-label>
+        <ion-checkbox slot="end" checked></ion-checkbox>
+      </ion-item>
+
+      <p>Daltonismo:</p>
+      <ion-radio-group>
+        <ion-item>
+          <ion-label>Prot</ion-label>
+          <ion-radio slot="start" value="prot"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Deut</ion-label>
+          <ion-radio slot="start" value="deut"></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>Trit</ion-label>
+          <ion-radio slot="start" value="trit"></ion-radio>
+        </ion-item>
+      </ion-radio-group>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Audio y subtítulos -->
+  <ion-card>
+    <ion-card-header>
+      <h3>🎧 Audio y subtítulos</h3>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label>Narración por voz</ion-label>
+        <ion-checkbox slot="end" checked></ion-checkbox>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label>Subtítulos visibles</ion-label>
+        <ion-checkbox slot="end" checked></ion-checkbox>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label>Sonidos reducidos</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Interacción -->
+  <ion-card>
+    <ion-card-header>
+      <h3>🎮 Interacción</h3>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label>Modo simplificado</ion-label>
+        <ion-checkbox slot="end"></ion-checkbox>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-label>Vibración háptica</ion-label>
+        <ion-checkbox slot="end" checked></ion-checkbox>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botones de acción -->
+  <div class="ion-text-center" style="margin-top:20px;">
+    <ion-button color="success" style="margin:5px;">✅ Guardar cambios</ion-button>
+    <ion-button color="medium" style="margin:5px;">↩️ Restaurar</ion-button>
+    <ion-button color="primary" style="margin:5px;">Probar configuración</ion-button>
+  </div>
+
+</ion-content>

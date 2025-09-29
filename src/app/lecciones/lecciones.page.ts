@@ -4,13 +4,13 @@ import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { 
   IonContent, IonHeader, IonTitle, IonToolbar, IonButtons, IonButton,
-  IonIcon, IonCard, IonCardContent, IonGrid, IonRow, IonCol, IonFooter, IonImg
+  IonIcon, IonCard, IonCardContent, IonGrid, IonRow, IonCol, IonFooter, IonBackButton
 } from '@ionic/angular/standalone';
 
 @Component({
-  selector: 'app-login-login',
-  templateUrl: './login-login.page.html',
-  styleUrls: ['./login-login.page.scss'],
+  selector: 'app-lecciones',
+  templateUrl: './lecciones.page.html',
+  styleUrls: ['./lecciones.page.scss'],
   standalone: true,
   imports: [
     CommonModule,
@@ -28,20 +28,17 @@ import {
     IonRow,
     IonCol,
     IonFooter,
-    IonImg
+    IonBackButton
   ]
 })
-export class LoginLoginPage implements OnInit {
+export class LeccionesPage implements OnInit {
 
   constructor(private router: Router) {}
 
   ngOnInit() {}
 
-  irLecciones() {
-    this.router.navigate(['/lecciones']);
-  }
-
-  irAccesibilidad() {
-    this.router.navigate(['/accesibilidad']);
+  irMinigame() {
+    this.router.navigate(['/minigame']);
   }
 }
+

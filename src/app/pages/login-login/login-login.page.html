@@ -1,13 +1,89 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>login</ion-title>
+
+
+<ion-header>
+  <ion-toolbar style="--background:#b3d9ff;">
+    <ion-title>Infinimath</ion-title>
+    <ion-buttons slot="end">
+      <!-- Botón solo texto -->
+      <ion-button fill="clear" (click)="irAccesibilidad()">
+        Accesibilidad
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">INFINIMATH </ion-title>
-    </ion-toolbar>
-  </ion-header>
+
+<ion-content class="ion-padding">
+
+  <!-- Tarjeta de saludo -->
+  <ion-card style="--background:#b3d9ff;">
+    <ion-card-content class="ion-text-center">
+      <ion-img src="assets/mascota.png" style="width:80px; margin:auto;"></ion-img>
+      <h2>👋 ¡Hola! Vamos a aprender matemáticas jugando 🎉</h2>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Opciones en cuadrícula -->
+  <ion-grid>
+    <ion-row>
+      <ion-col size="6">
+        <ion-card button>
+          <ion-card-content class="ion-text-center">
+            <div style="font-size:2rem;">🎮</div>
+            <p>Jugar</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+  <ion-card button (click)="irLecciones()">
+    <ion-card-content class="ion-text-center">
+      <div style="font-size:2rem;">📘</div>
+      <p>Aprender</p>
+    </ion-card-content>
+  </ion-card>
+</ion-col>
+
+    </ion-row>
+
+    <ion-row>
+      <ion-col size="6">
+        <ion-card button>
+          <ion-card-content class="ion-text-center">
+            <div style="font-size:2rem;">⭐</div>
+            <p>Mis logros</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="6">
+        <ion-card button>
+          <ion-card-content class="ion-text-center">
+            <div style="font-size:2rem;">📊</div>
+            <p>Progreso</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+  
 </ion-content>
+
+<ion-footer >
+  <ion-toolbar style="--background: #b3d9ff;">
+    <ion-buttons slot="start">
+      <ion-button>
+        <ion-icon name="help-circle-outline"></ion-icon>
+        Ayuda
+      </ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button>
+        <ion-icon name="bug-outline"></ion-icon>
+        Bug Hunters 🐞
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>
