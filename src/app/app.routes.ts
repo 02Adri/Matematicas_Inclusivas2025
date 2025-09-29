@@ -21,7 +21,8 @@ export const routes: Routes = [
   {
     path: 'minigame',
     loadComponent: () => import('./minigame/minigame.page').then( m => m.MinigamePage)
-  },  {
+  },
+  {
     path: 'accesibilidad',
     loadComponent: () => import('./accesibilidad/accesibilidad.page').then( m => m.AccesibilidadPage)
   },

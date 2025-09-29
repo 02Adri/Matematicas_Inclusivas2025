@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
+  <ion-toolbar style="--background:#b3d9ff;">
     <ion-title>
-      Login
+      Iniciar como Estudiante
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,22 +11,22 @@
   <div class="login-container">
     <ion-card class="login-card">
       <ion-card-header>
-        <ion-card-title class="login-title">Iniciar Sesión</ion-card-title>
+        <ion-card-title class="login-title">Login estudiante</ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
         <ion-item>
-          <ion-label position="floating">Usuario</ion-label>
+          <ion-label position="floating">Nombre del niño</ion-label>
           <ion-input type="text"></ion-input>
         </ion-item>
 
         <ion-item>
-          <ion-label position="floating">Contraseña</ion-label>
+          <ion-label position="floating">Codigo de estudiante</ion-label>
           <ion-input type="password"></ion-input>
         </ion-item>
 
         <ion-button expand="block" class="login-button" color="primary" (click)="goToLogin()">
-  Entrar
+  Ingresar
 </ion-button>
 
       </ion-card-content>
