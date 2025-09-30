@@ -7,7 +7,7 @@ export const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'estudiantes',  // <-- ruta por defecto cambia a estudiantes
     pathMatch: 'full',
   },
   {
@@ -26,7 +26,15 @@ export const routes: Routes = [
     path: 'accesibilidad',
     loadComponent: () => import('./accesibilidad/accesibilidad.page').then( m => m.AccesibilidadPage)
   },
-
-
+  {
+    path: 'estudiantes',
+    loadComponent: () => import('./estudiantes/estudiantes.page').then( m => m.EstudiantesPage)
+  },
 ];
+
+ 
+
+
+
+
 

@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar style="--background:#b3d9ff;">
+    <ion-title>Registro de Estudiantes</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="crud-background">
+
+  <!-- Crear / Actualizar -->
+  <ion-card class="crud-card">
+    <ion-card-header>
+      <ion-card-title>Crear / Actualizar Estudiante</ion-card-title>
+      <ion-card-subtitle>Llena los campos y presiona crear o actualiza tras buscar</ion-card-subtitle>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]="form" (ngSubmit)="crear()">
+        <ion-item class="crud-item">
+          <ion-label position="floating">Nombre completo</ion-label>
+          <ion-input formControlName="Nombre_Estudiante"></ion-input>
+        </ion-item>
+
+        <ion-item class="crud-item">
+          <ion-label position="floating">Edad</ion-label>
+          <ion-input type="number" formControlName="Edad"></ion-input>
+        </ion-item>
+
+        <ion-item class="crud-item">
+          <ion-label position="floating">Código del estudiante</ion-label>
+          <ion-input formControlName="Codigo_Estudiante"></ion-input>
+        </ion-item>
+
+        <ion-item class="crud-item">
+          <ion-label position="floating">Proceso de resultados</ion-label>
+          <ion-input type="number" formControlName="Proceso_Resultados"></ion-input>
+        </ion-item>
+
+        <div class="buttons-row">
+          <ion-button expand="full" type="submit" class="crud-button">Crear</ion-button>
+          <ion-button expand="full" color="warning" (click)="actualizar()" class="crud-button">Actualizar</ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Buscar / Eliminar -->
+  <ion-card class="crud-card">
+    <ion-card-header>
+      <ion-card-title>Buscar / Eliminar</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item class="crud-item">
+        <ion-input placeholder="Ingrese código" [(ngModel)]="searchCode" name="searchCode"></ion-input>
+        <ion-button slot="end" color="tertiary" (click)="buscar()">Buscar</ion-button>
+      </ion-item>
+
+      <div *ngIf="resultado" class="resultado">
+        <h3>Resultado</h3>
+        <p><strong>Nombre:</strong> {{resultado?.Nombre_Estudiante}}</p>
+        <p><strong>Edad:</strong> {{resultado?.Edad}}</p>
+        <p><strong>Código:</strong> {{resultado?.Codigo_Estudiante}}</p>
+        <p><strong>Proceso:</strong> {{resultado?.Proceso_Resultados}}</p>
+        <ion-button color="danger" (click)="eliminar()">Eliminar</ion-button>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <!-- Botón Iniciar al final -->
+  <div class="start-button-container">
+    <ion-button expand="block" color="primary" (click)="goHome()">Iniciar</ion-button>
+  </div>
+</ion-content>
